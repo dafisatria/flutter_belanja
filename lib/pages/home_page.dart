@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_belanja/models/item.dart';
 
 class HomePage extends StatelessWidget {
+  HomePage({Key? key}) : super(key: key);
   final List<Item> items = [
     Item(name: 'Sugar', price: 5000),
     Item(name: 'Salt', price: 2000)
   ];
 
-  HomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text('Shopping List'),
       ),
@@ -46,6 +45,6 @@ class HomePage extends StatelessWidget {
           },
         ),
       ),
-    ));
+    );
   }
 }
